@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/base';
+
+.main-div{
+  max-width:50%;
+  @include flex;
+  position: relative;
+  margin-top: 20%;
+  margin-left: 22%;
+  font-family: 'Satoshi';
+
+  .card-div{
+    width: 50%;
+    height:25rem;
+    background-color: $bg;
+    border-radius: $round;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: $shadow-lg;
+
+    transform: translate(var(--tx), var(--ty)) scale(var(--scale, 1));
+    transition: transform 0.3s ease;
+    
+    &.card1{ --tx: #{$t1}; --ty: #{$t1}; }
+    &.card2{ --tx: #{$t3}; --ty: #{$t3}; }
+    &.card3{ --tx: #{$t4}; --ty: #{$t4}; }
+    &.card4{ --tx: #{$t5}; --ty: #{$t5}; }
+
+
+    // &.card1{
+    //   transform: translate($t1,$t1); z-index: 4;
+    // }
+
+    // &.card2{
+    //   transform: translate($t3,$t3); z-index: 3;
+    // }
+
+    // &.card3{
+    //   transform: translate($t4,$t4); z-index: 2;
+      
+    // }
+
+    // &.card4{
+    //   transform: translate($t5,$t5); z-index: 1;
+    // }
+    
+    .card-img{
+      max-width: 100%;
+      height: 60%;
+      margin-top: 0;
+      object-fit: cover;
+      @include flex($justify:flex-start,$align:stretch)
+    }
+    .card-heading{
+      padding:$t1;
+      text-align: center;
+    }
+    .para{
+      padding:$t1;
+      padding-top: 0;
+    }
+  }
+}
+

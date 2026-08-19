@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url(../../assets/fonts/Satoshi-Variable.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+.main-div {
+  max-width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  margin-top: 20%;
+  margin-left: 22%;
+  font-family: "Satoshi";
+}
+.main-div .card-div {
+  width: 50%;
+  height: 25rem;
+  background-color: beige;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translate(var(--tx), var(--ty)) scale(var(--scale, 1));
+  transition: transform 0.3s ease;
+}
+.main-div .card-div.card1 {
+  --tx: 1rem;
+  --ty: 1rem;
+}
+.main-div .card-div.card2 {
+  --tx: 2rem;
+  --ty: 2rem;
+}
+.main-div .card-div.card3 {
+  --tx: 3rem;
+  --ty: 3rem;
+}
+.main-div .card-div.card4 {
+  --tx: 4rem;
+  --ty: 4rem;
+}
+.main-div .card-div .card-img {
+  max-width: 100%;
+  height: 60%;
+  margin-top: 0;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+}
+.main-div .card-div .card-heading {
+  padding: 1rem;
+  text-align: center;
+}
+.main-div .card-div .para {
+  padding: 1rem;
+  padding-top: 0;
+}/*# sourceMappingURL=stacked.css.map */

@@ -30,18 +30,22 @@
 .main-div .card-div.card1 {
   --tx: 1rem;
   --ty: 1rem;
+  z-index: 4;
 }
 .main-div .card-div.card2 {
   --tx: 2rem;
   --ty: 2rem;
+  z-index: 3;
 }
 .main-div .card-div.card3 {
   --tx: 3rem;
   --ty: 3rem;
+  z-index: 2;
 }
 .main-div .card-div.card4 {
   --tx: 4rem;
   --ty: 4rem;
+  z-index: 1;
 }
 .main-div .card-div .card-img {
   max-width: 100%;

@@ -115,3 +115,18 @@ body{
     color:$red;
   }
 }
+
+
+@media (max-width: 768px){
+  .main-div-2{
+    flex-direction: column;
+    height: auto;
+    
+    padding: 1rem 0;
+
+    .pricing-card{
+      width: 90%;  }
+  
+  
+ }
+}

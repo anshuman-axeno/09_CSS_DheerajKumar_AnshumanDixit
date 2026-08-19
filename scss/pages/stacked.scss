@@ -63,3 +63,34 @@
   }
 }
 
+@media (max-width: 768px){
+  .main-div{
+    max-width: 90%;
+    margin-left: 5%;
+    margin-top: 15rem;
+
+    .card-div{
+      height: 16rem;
+
+      .card-img{
+      height: 45%;    
+    }
+
+    .card-heading{
+      padding: 0.5rem;   
+      font-size: 1rem;   
+    }
+
+    .para{
+      padding: 0.5rem;      
+      padding-top: 0;       
+      font-size: 0.85rem;   
+    }
+
+      &.card1{ --tx: 0px; --ty: 0px; }
+      &.card2{ --tx: 0.5rem; --ty: 0.5rem; }
+      &.card3{ --tx: $t1; --ty: $t1; }
+      &.card4{ --tx: $t2; --ty: $t2; }
+    }
+  }
+}

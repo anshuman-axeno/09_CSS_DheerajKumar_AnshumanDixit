@@ -128,4 +128,15 @@ body {
 }
 .main-div-2 .cross {
   color: red;
+}
+
+@media (max-width: 768px) {
+  .main-div-2 {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  .main-div-2 .pricing-card {
+    width: 90%;
+  }
 }/*# sourceMappingURL=pricing.css.map */

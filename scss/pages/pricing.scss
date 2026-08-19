@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/base';
+
+
+body{
+  margin: 0;
+  padding:none;
+}
+.main-div-2{
+  background-color:rgb(14, 95, 255);
+  height: 100vh;
+  margin: -1px;
+  @include flex;
+  font-family: 'Satoshi';
+
+  .pricing-card{
+    background-color: $white;
+    height:60%;
+    padding:0.5rem;
+    padding-right: 1rem;
+    @include flex(column, flex start);
+
+    .purchase{
+      background-color: $white;
+      border-radius: 2rem;
+      padding: 0.5rem;
+    
+      &.purchase1{
+        border:1px solid yellow;
+    }
+    }
+  }
+
+}

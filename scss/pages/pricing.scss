@@ -7,7 +7,7 @@ body{
   margin: 0;
 }
 .main-div-2{
-  background-color:rgb(14, 95, 255);
+  background-color:rgb(47, 116, 254);
   height: 100vh;
   @include flex($gap:$t3);
   font-family: 'Satoshi';
@@ -21,6 +21,11 @@ body{
     padding:0.5rem;
     padding-right: 1rem;
     @include flex(column, flex start);
+    &:hover{
+      transform: scale(1.05);
+      transition: all;
+      transition-duration: 300ms;
+    }
 
     &.pricing-card2 {
     position: relative;
@@ -62,7 +67,9 @@ body{
       }
     }
     .pricing-heading{
+      font-family: 'Integral';
       font-weight: bold;
+      margin:0;
     }
 
     .para {
@@ -80,6 +87,7 @@ body{
       border-radius: 2rem;
       padding: 0.5rem;
       width:80%;
+      margin-bottom: 1rem;
       
       &.purchase-1 {
         border: 2px solid $yellow;

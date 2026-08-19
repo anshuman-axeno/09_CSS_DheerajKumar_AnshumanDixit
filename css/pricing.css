@@ -6,23 +6,23 @@
 }
 body {
   margin: 0;
-  padding: none;
 }
 
 .main-div-2 {
   background-color: rgb(14, 95, 255);
   height: 100vh;
-  margin: -1px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 2rem;
   font-family: "Satoshi";
+  object-fit: contain;
 }
 .main-div-2 .pricing-card {
   background-color: white;
-  height: 60%;
+  height: min-content;
+  width: 20%;
   padding: 0.5rem;
   padding-right: 1rem;
   display: flex;
@@ -31,11 +31,87 @@ body {
   align-items: center;
   gap: 10px;
 }
+.main-div-2 .pricing-card.pricing-card2 {
+  position: relative;
+  overflow: hidden;
+}
+.main-div-2 .pricing-card.pricing-card2::before {
+  content: "RECOMMEND";
+  position: absolute;
+  top: 25px;
+  left: -45px;
+  width: 150px;
+  padding: 8px;
+  background-color: #9b5de5;
+  color: white;
+  text-align: center;
+  transform: rotate(-45deg);
+}
+.main-div-2 .pricing-card h2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main-div-2 .pricing-card h2.price-1 {
+  background-color: #f5ca45;
+  outline: 2px solid #f5ca45;
+  outline-offset: 5px;
+}
+.main-div-2 .pricing-card h2.price-2 {
+  background-color: #9b5de5;
+  outline: 2px solid #9b5de5;
+  outline-offset: 5px;
+}
+.main-div-2 .pricing-card h2.price-3 {
+  background-color: #35d98b;
+  outline: 2px solid #35d98b;
+  outline-offset: 5px;
+}
+.main-div-2 .pricing-card .pricing-heading {
+  font-weight: bold;
+}
+.main-div-2 .pricing-card .para {
+  list-style: none;
+  padding: 0;
+}
+.main-div-2 .pricing-card .para li {
+  margin: 12px 0;
+  font-size: 14px;
+}
 .main-div-2 .pricing-card .purchase {
   background-color: white;
   border-radius: 2rem;
   padding: 0.5rem;
+  width: 80%;
 }
-.main-div-2 .pricing-card .purchase.purchase1 {
-  border: 1px solid yellow;
+.main-div-2 .pricing-card .purchase.purchase-1 {
+  border: 2px solid #f5ca45;
+}
+.main-div-2 .pricing-card .purchase.purchase-2 {
+  background-color: #9b5de5;
+  color: white;
+  border: 2px solid #9b5de5;
+}
+.main-div-2 .pricing-card .purchase.purchase-3 {
+  border: 2px solid #35d98b;
+}
+.main-div-2 .ul-li {
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.main-div-2 .tick {
+  color: #35d98b;
+}
+.main-div-2 .cross {
+  color: red;
 }/*# sourceMappingURL=pricing.css.map */

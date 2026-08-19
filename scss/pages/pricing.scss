@@ -5,31 +5,105 @@
 
 body{
   margin: 0;
-  padding:none;
 }
 .main-div-2{
   background-color:rgb(14, 95, 255);
   height: 100vh;
-  margin: -1px;
-  @include flex;
+  @include flex($gap:$t3);
   font-family: 'Satoshi';
+  object-fit: contain;
+  
 
   .pricing-card{
     background-color: $white;
-    height:60%;
+    height:min-content;
+    width:20%;
     padding:0.5rem;
     padding-right: 1rem;
     @include flex(column, flex start);
+
+    &.pricing-card2 {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "RECOMMEND";
+      position: absolute;
+      top: 25px;
+      left: -45px;
+      width: 150px;
+      padding: 8px;
+      background-color: $purple;
+      color: $white;
+      text-align: center;
+      transform: rotate(-45deg);
+
+    }
+  }
+
+    h2{
+      @include heading;
+      
+
+      &.price-1{
+        background-color: $yellow;
+        outline: 2px solid $yellow;
+        outline-offset: 5px;
+      }
+      &.price-2{
+        background-color: $purple;
+        outline: 2px solid $purple;
+        outline-offset: 5px;
+      }
+      &.price-3{
+        background-color: $green;
+        outline: 2px solid $green;
+        outline-offset: 5px;
+      }
+    }
+    .pricing-heading{
+      font-weight: bold;
+    }
+
+    .para {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 12px 0;
+        font-size: 14px;
+      }
+    }
 
     .purchase{
       background-color: $white;
       border-radius: 2rem;
       padding: 0.5rem;
-    
-      &.purchase1{
-        border:1px solid yellow;
-    }
+      width:80%;
+      
+      &.purchase-1 {
+        border: 2px solid $yellow;
+      }
+
+      &.purchase-2 {
+        background-color: $purple;
+        color: $white;
+        border: 2px solid #9b5de5;
+      }
+
+      &.purchase-3 {
+        border: 2px solid $green;
+      }
     }
   }
+  .ul-li{
+    @include flex(flex-start,space-between)
+  }
 
+  .tick{
+    color:$green;
+  }
+  .cross{
+    color:$red;
+  }
 }

@@ -10,3 +10,14 @@
   align-items: $align;
   gap: $gap;
 }
+
+@mixin heading(
+  $bg:black
+) {
+  width:80px;
+  height:80px;
+  border-radius: 100%;
+  background-color: $bg;
+  color: white;
+  @include flex;
+}
